@@ -1,5 +1,6 @@
 import React from 'react';
 import WorkImg from '../assets/workImg.jpeg';
+import Wordle from '../assets/wordle.png';
 import realEstate from '../assets/realestate.jpg';
 
 const Work = () => {
@@ -16,23 +17,25 @@ const Work = () => {
 {/* Container */}
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
 
-            {/* Grid Item */}
+          {/* Grid Item */}
+          <div>
+
           <div
-            style={{ backgroundImage: `url(${WorkImg})` }}
+            style={{ backgroundImage: `url(${Wordle})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
           >
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
               <span className='text-2xl font-bold text-white tracking-wider'>
-                React JS Application
+                Wordle Clone
               </span>
               <div className='pt-8 text-center'>
-                <a href='/'>
+                <a href='https://wordle-clone-vickyruud.netlify.app/'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Demo
                   </button>
                 </a>
-                <a href='/'>
+                <a href='https://github.com/vickyruud/wordle-clone'>
                   <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
                     Code
                   </button>
@@ -40,6 +43,8 @@ const Work = () => {
               </div>
             </div>
           </div>
+            <p className='font-bold text-center py-2'>Wordle Clone built using ReactJS</p>
+            </div>
           <div
             style={{ backgroundImage: `url(${realEstate})` }}
             className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
