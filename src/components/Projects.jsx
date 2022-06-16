@@ -7,7 +7,7 @@ import Nutri from "../assets/nutri.png";
 import StoryBoard from "../assets/story.png"
 
 
-const Work = () => {
+const Projects = () => {
   return (
     <div name="projects" className="w-full md:h-screen text-gray-300 bg-[#2d0202]">
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
@@ -181,4 +181,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;
