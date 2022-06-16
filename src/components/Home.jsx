@@ -25,7 +25,7 @@ const Home = () => {
         <div className="flex flex-row gap-16">
             <Link to="work" spy={true} smooth={true} duration={500}>
           <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-red-500 hover:border-red-500">
-              View Work
+              Projects
             <span className="group-hover:rotate-90 duration-300">
               <HiArrowNarrowRight className="ml-3" />
             </span>
