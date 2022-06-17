@@ -11,9 +11,9 @@ const NavBar = () => {
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#171515] text-gray-300">
-      <div>
+      <a href="#home">
         <img src={Logo} alt="ak" className="ml-[-40px] w-[150px]" />
-      </div>
+      </a>
 
       {/* menu */}
       <ul className="hidden md:flex">
