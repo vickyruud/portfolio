@@ -55,7 +55,7 @@ const skillsList = [
 ]
 
 const arrayOfSkills = skillsList.map(skill => {
-    return <OneSkill text={skill.text} image={skill.image} />
+    return <OneSkill key={skill.id} text={skill.text} image={skill.image} />
 })
 
 
