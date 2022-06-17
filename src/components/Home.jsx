@@ -6,7 +6,7 @@ import Photo from '../assets/photo.jpg'
 
 const Home = () => {
   return (
-    <div name='home' className="bg-[#2c2e30] w-full h-screen">
+    <div id='home' className="bg-[#2c2e30] w-full h-screen">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
         <img src={Photo} alt="profile" className="object-contain w-48 h-48 mb-8 pt-4" />
