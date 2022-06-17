@@ -9,8 +9,8 @@ const OneProject = ({ image, demo, code, tech, title }) => {
       >
         {/* Hover Effects */}
         <div className="opacity-0 group-hover:opacity-100 group-focus:opacity-100">
-          <span className="text-2xl font-bold text-white tracking-wider">
-            <p className="items-center">Tech Stack : {tech}</p> 
+          <span className="text-2xl font-bold text-white tracking-wider ">
+            <p className=" text-center">Tech Stack : {tech}</p> 
           </span>
           <div className="pt-8 text-center">
             {demo ?  <a
