@@ -27,7 +27,7 @@ const Contact = () => {
 
   const submitForm = (event) => {
     event.preventDefault();
-    
+
     if (name.trim() && email.trim() && message.trim()) {
       setLoading(true);
       const newMessage = {
@@ -75,7 +75,7 @@ const Contact = () => {
           <p className="text-gray-300 py-4">
             Submit the form below or shoot me an email - aprajit.k@gmail.com
           </p>
-          {loading? <Loading/> : null}
+          {loading ? <Loading /> : null}
           {submitSuccess ? <SuccessAlert handleClose={closeSuccess} /> : null}
           {errorMessage ? (
             <ErrorAlert handleClose={closeError} message={errorMessage} />
@@ -106,7 +106,7 @@ const Contact = () => {
           placeholder="Message"
         ></textarea>
         <button className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
-         {loading? <p>Submitting....</p> : <p>Let's Collaborate!</p>}
+          {loading ? <p>Submitting....</p> : <p>Let's Collaborate!</p>}
         </button>
       </form>
     </div>
