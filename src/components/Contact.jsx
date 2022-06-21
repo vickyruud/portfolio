@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import ErrorAlert from "./ErrorAlert";
 import SuccessAlert from "./SuccessAlert";
+import Loading from "./Loading";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -10,6 +11,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const closeError = () => {
     setErrorMessage(null);
@@ -17,7 +19,7 @@ const Contact = () => {
 
   const closeSuccess = () => {
     setSubmitSuccess(false);
-  }
+  };
 
   const nameInput = document.getElementById("nameInput");
   const emailInput = document.getElementById("emailInput");
@@ -25,6 +27,7 @@ const Contact = () => {
 
   const submitForm = (event) => {
     event.preventDefault();
+    setLoading(true);
 
     if (name.trim() && email.trim() && message.trim()) {
       const newMessage = {
@@ -48,11 +51,11 @@ const Contact = () => {
           messageInput.value = "";
           setSubmitSuccess(true);
           setErrorMessage(null);
-          
+          setLoading(false);
         });
     } else {
       setErrorMessage("Please complete the form before submitting!");
-      
+      setLoading(false);
     }
   };
 
@@ -61,11 +64,10 @@ const Contact = () => {
       id="contact"
       className="w-full h-screen bg-[#2c2e30] flex flex-col justify-center items-center p-4"
     >
-
       <form
         onSubmit={submitForm}
         className="flex flex-col max-w-[600px] w-full"
-        >
+      >
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-pink-600 text-gray-300">
             Contact
@@ -73,7 +75,8 @@ const Contact = () => {
           <p className="text-gray-300 py-4">
             Submit the form below or shoot me an email - aprajit.k@gmail.com
           </p>
-        {submitSuccess ? <SuccessAlert handleClose={closeSuccess}/> : null}
+          {loading? <Loading/> : null}
+          {submitSuccess ? <SuccessAlert handleClose={closeSuccess} /> : null}
           {errorMessage ? (
             <ErrorAlert handleClose={closeError} message={errorMessage} />
           ) : null}
