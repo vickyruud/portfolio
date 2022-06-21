@@ -27,9 +27,9 @@ const Contact = () => {
 
   const submitForm = (event) => {
     event.preventDefault();
-    setLoading(true);
-
+    
     if (name.trim() && email.trim() && message.trim()) {
+      setLoading(true);
       const newMessage = {
         name,
         email,
