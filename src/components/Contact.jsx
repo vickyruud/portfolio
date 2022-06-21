@@ -52,9 +52,7 @@ const Contact = () => {
         });
     } else {
       setErrorMessage("Please complete the form before submitting!");
-      nameInput.value = "";
-      emailInput.value = "";
-      messageInput.value = "";
+      
     }
   };
 
