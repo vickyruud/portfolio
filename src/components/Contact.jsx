@@ -100,7 +100,7 @@ const Contact = () => {
         <textarea
           id="messageInput"
           onChange={(e) => setMessage(e.target.value)}
-          className="bg-[#ccd6f6] p-2"
+          className="bg-[#ccd6f6] p-2 h-16 md:h-48"
           name="message"
           rows="10"
           placeholder="Message"
